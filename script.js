@@ -1,8 +1,13 @@
 document.addEventListener('DOMContentLoaded', function(){
     const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade')
     const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade')
- 
+    botaoDeAcessibilidade.classList.add("bg-btn-color")
     botaoDeAcessibilidade.addEventListener('click', function (){
+    if(botaoDeAcessibilidade.classList.contains(".bg-btn-color")) {
+        botaoDeAcessibilidade.classList.remove("bg-btn-color")
+    } else {
+        botaoDeAcessibilidade.classList.add("bg-btn-color")
+    }
      botaoDeAcessibilidade.classList.toggle('rotacao-botao');
      opcoesDeAcessibilidade.classList.toggle('apresenta-lista')
  
@@ -33,8 +38,6 @@ document.addEventListener('DOMContentLoaded', function(){
      alternaContraste.addEventListener('click', function(){
          document.body.classList.toggle('alto-contraste')
      })
- 
- 
  })
  
  ScrollReveal().reveal('#inicio', { delay: 500 });
